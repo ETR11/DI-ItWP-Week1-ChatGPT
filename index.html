@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Hello World Page</title>
+  </head>
+  <body>
+    <h1 id="my-heading">Hello world</h1>
+    <button id="my-button">Click me</button>
+
+    <ul id="my-list"></ul>
+
+    <textarea id="my-textarea"></textarea>
+    <button id="add-data">Add Item</button>
+
+    <script>
+      var button = document.getElementById("add-data");
+      var button2 = document.getElementById("my-button");
+      var list = document.getElementById("my-list");
+      var textarea = document.getElementById("my-textarea");
+      var heading = document.getElementById("my-heading");
+
+      button2.addEventListener("click", function () {
+        console.log("hello world");
+        heading.textContent = "My notebook";
+      });
+
+      button.addEventListener("click", function () {
+        var newItem = document.createElement("li");
+        newItem.textContent = textarea.value;
+        list.appendChild(newItem);
+      });
+    </script>
+  </body>
+</html>
